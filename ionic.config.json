@@ -1,0 +1,7 @@
+{
+  "name": "FormationApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
