@@ -1,0 +1,14 @@
+
+<ion-toolbar color="tertiary">
+
+  <ion-title>
+   <a routerLink="/home" style="text-decoration: none;color: white;"> MyCourses</a>
+  </ion-title>
+  <ion-button  *ngIf="!isConnected() ; else elseBlock" (click)="buttonLogin()" fill="outline" slot="end" color="secondary">Login <ion-icon name="person-circle"></ion-icon>
+  </ion-button>
+  <ng-template #elseBlock>
+    <ion-label slot="end"   (click)="recap()" class="ion-text-wrap">
+   Vos formations
+    </ion-label>
+    </ng-template>
+</ion-toolbar>

@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<ion-content  >
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="12" size-xs="12">
+          <ion-card>
+            <ion-text>
+            <h3 style="text-align: center;">Crée ton compte!</h3>
+          </ion-text>
+          
+           
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
+            </ion-item>
+            <ion-button color="secondary" size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+        </ion-card>
+        Vous avez déjà un compte ,<ion-anchor style="color: #31c2ff;"  routerLink="/login">connectez-vous</ion-anchor>.
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

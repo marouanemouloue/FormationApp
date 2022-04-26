@@ -6,6 +6,11 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+
+
 }
 
 #container strong {
@@ -24,4 +29,13 @@
 
 #container a {
   text-decoration: none;
+}
+.bgImg{
+  padding: 1px;
+  height: 100%;
+  width: 100%;
+  background: rgb(97,191,254);
+  background: linear-gradient(90deg, rgba(97,191,254,1) 0%, rgba(255,255,255,1) 83%, rgba(241,241,241,1) 100%);
+  background-repeat: no-repeat;
+background-size: cover;
 }

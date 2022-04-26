@@ -1,0 +1,26 @@
+<app-header ></app-header>
+<ion-content  padding>
+  <form #form="ngForm" >
+    <ion-grid>
+      <ion-row  justify-content-center>
+        <ion-col align-self-center size-md="12" size-xs="12">
+          <ion-card>
+            <h3 style="align-self: center;">Connectez-vous</h3>
+         
+            <ion-item padding> 
+              <ion-input name="email" type="email" placeholder="abc@email.com" ngModel required></ion-input>
+            </ion-item>
+            <ion-item padding>
+              <ion-input name="password" type="password" placeholder="Mot de Passe" ngModel required></ion-input>
+            </ion-item>
+          
+            <ion-button color="secondary" (click)="login(form)" type="submit" [disabled]="form.invalid" expand="block">Se connecter</ion-button>
+        </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-label color="danger">{{messErreur}}</ion-label>
+      <ion-row>
+        <ion-item >
+          <p style="text-align: center;">   <ion-anchor style="color: #31c2ff;" routerLink='/inscription'>Inscrivez-vous</ion-anchor> maintenant!</p>
+        </ion-item>
+    </ion-row>

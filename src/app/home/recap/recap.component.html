@@ -1,0 +1,44 @@
+<ion-toolbar color="tertiary">
+
+  <ion-title>
+   <a routerLink="/home" style="text-decoration: none;color: white;"> MyCourses</a>
+  </ion-title>
+  <ion-label  (click)="seDeconnecter()" slot="end" color="secondary">Se Deconnecter
+  </ion-label>
+
+</ion-toolbar>
+<ion-content #container  >
+
+<ion-list  *ngFor="let form of formations">
+  <ion-grid >
+    <ion-row >
+      <ion-col size="12" class="ion-align-items-center" size-md>
+        <ion-item >
+          <ion-card color="light"  >
+      
+
+            <ion-card-header>
+              <ion-card-title>{{form.Nom}}</ion-card-title>
+      
+            </ion-card-header>
+      
+      
+            <ion-item color="tertiary" [(ngModel)]="keyRoute"  (click)="keyRoute=form.key;buttonDetails()" ngDefaultControl >
+              <ion-label>
+                Plus de details 
+              </ion-label>
+            </ion-item>
+            
+      
+           
+          </ion-card>
+          </ion-item>
+       
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-list>
+</ion-content>
+

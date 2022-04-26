@@ -1,0 +1,80 @@
+<app-header></app-header>
+<ion-content #container>
+
+
+  <ion-list *ngFor="let form of formations">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-align-items-center" size-md>
+          <ion-item color="tertiary">
+           <h1 >{{form.Nom}}</h1>
+          </ion-item>
+         
+
+        </ion-col>
+      </ion-row>
+      
+      <ion-row class="ion-justify-content-center ">
+        <ion-card  color="tertiary"  >
+         <ion-card-header>
+            <ion-card-subtitle>Durée : {{form.Duree}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+           <ion-button *ngIf="!verifierInscrit(); else elseBlock" (click)="inscriptionFormation()" color="secondary">S'inscrire</ion-button>
+           <ng-template #elseBlock>
+            <ion-label slot="end"  color="success" class="ion-text-wrap">
+           
+           Vous etes déjà inscrit(e) .
+            </ion-label>
+            </ng-template>
+
+          </ion-card-content>       
+        </ion-card>
+   
+      </ion-row>
+      <ion-row >
+        <ion-col size="12">
+          <ion-item  >
+
+            <h3> Details du cours : </h3>
+  
+          </ion-item>
+
+
+        </ion-col>
+        <ion-col size="12">
+          <ion-item >
+            <ion-text >
+                <br/>  {{form.Details}}
+            </ion-text>
+          </ion-item>
+        </ion-col>
+        </ion-row>
+
+      <ion-row>
+
+        <ion-item  >
+
+          <h3>Contenu du cours : </h3>
+
+        </ion-item>
+      </ion-row>  
+      <ion-row >
+      <ion-item >
+        <ion-text >
+            <br/>  {{form.Contenu}}.
+        </ion-text>
+      </ion-item>
+
+      </ion-row>
+     
+
+
+
+
+    </ion-grid>
+
+
+  </ion-list>
+
+</ion-content>
